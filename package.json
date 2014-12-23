@@ -1,0 +1,28 @@
+{
+  "name": "oj",
+  "version": "1.0.0",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-php": "~1.1.0",
+    "grunt-contrib-less": "~0.11.4",
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-shell": "~1.1.1",
+    "grunt-less-imports": "~1.0.0",
+    "grunt-contrib-concat": "~0.5.0"
+  },
+  "dependencies": {
+    "time-grunt": "~1.0.0"
+  }
+}
