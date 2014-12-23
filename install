@@ -2,4 +2,7 @@
 
 # install node and composer modules
 npm install
+mkdir cache
+mkdir cache/assets
+mkdir cache/fonts
 grunt update
