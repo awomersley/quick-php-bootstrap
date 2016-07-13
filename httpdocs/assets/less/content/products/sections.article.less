@@ -1,0 +1,37 @@
+article.products-sections{
+
+  .text{
+    padding: @sm 0;
+    border-bottom:3px solid @black;
+    position: relative;
+
+    i {
+
+      position:absolute;
+      right:20px;
+      top:30px;
+    }
+
+    .sm({
+      text-align:left;
+      padding-top:0;
+    });
+
+  }
+
+  .title{
+
+    color:@black;
+
+  }
+
+  &:hover {
+    h4{
+      color:@primary;
+    }
+    .text{
+      border-color:@primary;
+    }
+  }
+
+}

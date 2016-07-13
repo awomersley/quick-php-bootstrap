@@ -1,0 +1,148 @@
+/* ========================================================================
+ * STAN Utils: Form Elements
+ * Author: Andrew Womersley
+ * ======================================================================== */
+
+.sa-checkbox,
+.sa-checkbox label,
+.sa-radio,
+.sa-radio label,
+.sa-select,
+.sa-select select,
+.sa-select-multiple,
+.sa-select-multiple label{
+  cursor:pointer;
+}
+
+.sa-checkbox,
+.sa-radio,
+.sa-select{
+  position:relative;
+}
+
+.sa-checkbox input,
+.sa-radio input,
+.sa-select-multiple input{
+  display:none;
+}
+
+.sa-radio.inline{
+  display:inline-block;
+  margin-right:30px;
+}
+
+.sa-select .inner{
+  background:#fff;
+}
+
+.sa-select select{
+  background:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  position:relative;
+  z-index:20;
+}
+
+.form-group.sa-checkbox .sa-on{
+  display:none;
+}
+.form-group.sa-checkbox .sa-off{
+  display:block;
+}
+.form-group.sa-checkbox.active .sa-on{
+  display:block;
+}
+.form-group.sa-checkbox.active .sa-off{
+  display:none;
+}
+
+.sa-checkbox label,
+.sa-radio label{
+  margin:0;
+  font-weight:normal;
+}
+
+.sa-checkbox i,
+.sa-radio i{
+  top: 10px;
+}
+
+.sa-select .arrows{
+  position:absolute;
+  right:10px;
+  z-index:1;
+  color:#aaa;
+}
+
+.sa-select-multiple{
+    position:relative;
+}
+
+.sa-select-multiple .sa-click{
+  span{
+    width:100%;
+    padding-right:30px;
+    white-space: nowrap;
+    display:block;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    color:#888;
+  }
+}
+
+.sa-select-multiple.active .form-control{
+  border-bottom-left-radius:0 !important;
+  border-bottom-right-radius:0 !important;
+}
+
+.sa-select-multiple .options-holder{
+    overflow:hidden;
+    overflow-y:auto;
+    height:auto;
+    max-height:200px;
+    padding:15px;
+    padding-top:0;
+    background:#fff;
+    border:1px solid #dfdfdf;
+    //border-top:0px;
+}
+
+.sa-select-multiple .sa-checkbox.form-group{
+  margin-bottom:0;
+  padding-bottom:10px;
+  padding-top:2px;
+  label{
+    padding-top:2px;
+  }
+  &:last-child{
+    padding-bottom:0;
+  }
+}
+
+.sa-select-multiple.sa-lg .options-holder{
+  max-height:300px;
+}
+
+.sa-select-multiple .options-holder label{
+  margin-bottom:15px;
+  position:relative;
+  display:block;
+}
+.sa-select-multiple .options-holder label:after{
+  content:" ";
+  display:block;
+  position:absolute;
+  top:100%;
+  left:0;
+  height:5px;
+  width:100%;
+}
+.sa-select-multiple .options-holder label:last-child{
+  margin-bottom:0;
+}
+.sa-select-multiple .options-holder label:last-child:after{
+  border-bottom:none;
+  height:0;
+}
+
+.sa-select-multiple .options-holder label.active{}

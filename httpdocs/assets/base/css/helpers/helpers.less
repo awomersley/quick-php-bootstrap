@@ -1,0 +1,223 @@
+/* ========================================================================
+ * STAN Utils: Helpers
+ * Author: Andrew Womersley
+ * ======================================================================== */
+
+section{ position:relative; }
+svg{ display:inline-block; }
+
+.sa-hidden{ visibility:hidden; }
+.none{ display:none; }
+
+.sa-on, .active .sa-off, .sa-hover:hover .sa-off{
+  display:none;
+}
+.active .sa-on, .sa-hover:hover .sa-on{
+  display:block;
+}
+.sa-click{
+  cursor:pointer;
+}
+
+/** Floats */
+ .float-left {
+    float:left !important;
+}
+.float-right {
+    float:right !important;
+}
+
+.mobile-scroll{
+  overflow:hidden;
+  overflow-x:auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+ul.inline {
+    li {
+        display: inline-block;
+    }
+}
+
+.text-center{
+  text-align:center !important;
+}
+.text-right{
+  text-align:right !important;
+}
+.text-left{
+  text-align:left !important;
+}
+
+.mobile({
+  .hidden-mobile{
+    display:none !important;
+  }
+  .text-center-mobile{
+    text-align:center;
+  }
+});
+.desktop({
+  .hidden-desktop{
+    display:none !important;
+  }
+  .text-center-desktop{
+    text-align:center;
+  }
+	a[href^='tel:']{
+		cursor:default;
+	}
+});
+
+/** Text aligns
+.text-left,
+.device-xs .text-left-xs,
+.device-sm .text-left-sm,
+.device-md .text-left-md,
+.device-lg .text-left-lg {
+    text-align:left !important;
+}
+
+.text-center,
+.device-xs .text-center-xs,
+.device-sm .text-center-sm,
+.device-md .text-center-md,
+.device-lg .text-center-lg{
+    text-align:center !important;
+}
+.text-right,
+.device-xs .text-right-xs,
+.device-sm .text-right-sm,
+.device-md .text-right-md,
+.device-lg .text-right-lg{
+    text-align:right !important;
+}
+*/
+
+/** Heights */
+.height-xs{
+    height:@xs !important;
+}
+.height-sm{
+    height:@sm !important;
+}
+.height-md{
+    height:@md !important;
+}
+.height-lg{
+    height:@lg !important;
+}
+.height-xl{
+    height:@xl !important;
+}
+.height-xxl{
+    height:@xxl !important;
+}
+
+/** Line heights */
+.line-xs,
+.line-xs * {
+    line-height:@xs !important;
+}
+.line-sm,
+.line-sm * {
+    line-height:@sm !important;
+}
+.line-md,
+.line-md * {
+    line-height:@md !important;
+}
+.line-lg,
+.line-lg * {
+    line-height:@lg !important;
+}
+.line-xl,
+.line-xl * {
+    line-height:@xl !important;
+}
+.line-xxl,
+.line-xxl * {
+    line-height:@xxl !important;
+}
+
+
+/** Display/Postion */
+ .block {
+    display:block !important;
+}
+.relative {
+    position:relative !important;
+}
+.static {
+    position:static !important;
+}
+
+
+/** Cursor */
+ .pointer {
+    cursor:pointer !important;
+}
+
+
+.img-fullwidth {
+    width:100%;
+    display:block;
+    height:auto;
+}
+
+
+/** Transition */
+.transition(@args:200ms) {
+    -webkit-transition: @args;
+    -moz-transition: @args;
+    -o-transition: @args;
+    -ms-transition: @args;
+    transition: @args;
+}
+.transition-sm {
+    .transition(all 0.3s ease);
+}
+.transition-md {
+    .transition(all 0.6s ease);
+}
+.transition-lg {
+    .transition(all 0.9s ease);
+}
+
+.transition-opacity-sm {
+    .transition(opacity 0.3s ease);
+}
+.transition-opacity-md {
+    .transition(opacity 0.6s ease);
+}
+.transition-opacity-lg {
+    .transition(opacity 0.9s ease);
+}
+
+a.no-style, a.no-style:hover {
+    color:inherit !important;
+    text-decoration:none !important;
+}
+ul, ol, li {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+fieldset, img {
+    border: none;
+}
+a {
+    outline:none;
+    text-decoration:none;
+}
+
+/** Clear Fix - Add here all elements that have cf auto aplied */
+ .sa-cf:before, .sa-cf:after, .nav-horizontal>ul:before, .nav-horizontal>ul:after {
+    content:" ";
+    display: table;
+}
+.sa-cf:after, .nav-horizontal>ul:after {
+    clear: both;
+}

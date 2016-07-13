@@ -1,0 +1,28 @@
+article.faq{
+
+  padding:@xs @sm;
+  border-bottom:solid 1px @light;
+
+  &:first-child{
+    border-top:solid 1px @light;
+  }
+
+  &.active{
+    background:@xlight;
+  }
+
+  .question{
+    position:relative;
+  }
+
+  .collapse-icon{
+    right:10px;
+    top:2px;
+    position:absolute;
+  }
+
+  .answer{
+    .before(@xs);
+  }
+
+}

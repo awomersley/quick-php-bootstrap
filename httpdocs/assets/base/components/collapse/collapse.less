@@ -1,0 +1,37 @@
+/* ========================================================================
+ * STAN Utils: Collapse
+ * Author: Andrew Womersley
+ * ======================================================================== */
+ .sa-collapse .sa-click {
+    cursor:pointer;
+    margin-bottom:0 !important;
+    //position:relative; breaks main nav
+}
+.sa-collapse .collapse-content {
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
+.sa-collapse .collapse-content  :last-child {
+    margin-bottom:0;
+}
+.sa-collapse:not(.active) .sa-click .sa-on {
+    display:none;
+}
+.sa-collapse:not(.active) .sa-click .sa-off {
+    display:block;
+}
+.sa-collapse.inactive  .sa-click .sa-on, .sa-collapse.inactive  .sa-click .sa-off {
+    display:none;
+}
+.sa-collapse.inactive  .sa-click {
+    cursor:auto;
+}
+.sa-collapse.inactive.hide-click  .sa-click {
+    display:none;
+}
+
+.mobile({
+    .closed-mobile{
+      display:none;
+    }
+});

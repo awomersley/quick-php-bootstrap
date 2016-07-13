@@ -1,0 +1,124 @@
+/*
+--------------------------------------------------------------
+N A V  V E R T I C A L
+-------------------------------------------------------------- */
+.nav-vertical{
+
+	li {
+		position:relative;
+	}
+
+	a {
+		color: @dark;
+		display: block;
+		&.active {
+			color: @primary;
+		}
+		&:hover {
+			color: @primary;
+		}
+	}
+
+	.matches{
+		.valign-mid();
+		right:3px;
+		.box(20px,0);
+		i{
+			.box(20px,0);
+		}
+	}
+
+	.has-matches{
+		padding-right:30px;
+	}
+
+}
+
+
+/*
+--------------------------------------------------------------
+N A V  V E R T I C A L  -  P L A I N
+-------------------------------------------------------------- */
+.nav-vertical-plain {
+
+	li {
+		margin-bottom: @xs;
+
+		ul{
+			font-size:@font-sm;
+			margin-top: @xs;
+			padding-left:@sm;
+			border-left:solid 1px @light;
+		}
+
+	}
+	li:last-child{
+		margin-bottom: 0;
+	}
+
+}
+
+/*
+--------------------------------------------------------------
+N A V  V E R T I C A L  -  F I L T E R
+-------------------------------------------------------------- */
+.nav-vertical-filter {
+
+	a{
+		padding:@xxs @xs;
+	}
+
+	.matches{
+		background:@light;
+		right:@xs;
+		border-radius:5px;
+		.font-sm();
+	}
+
+	a:hover{
+		background:@xlight;
+		.matches{
+			background:@white;
+		}
+	}
+	a.active{
+		background:@light;
+		.matches{
+			background:@xlight;
+		}
+	}
+
+}
+
+
+/*
+--------------------------------------------------------------
+N A V  V E R T I C A L  - S T Y L E D
+-------------------------------------------------------------- */
+.nav-vertical-styled {
+
+	>ul{
+		border-top: 1px solid @light;
+		>li {
+			border-bottom: 1px solid @light;
+			margin-bottom: 0;
+			border-left: 3px solid transparent;
+			&.active {
+				border-left-color: @primary;
+			}
+			a {
+				padding: @xs @sm;
+			}
+		}
+	}
+	ul ul{
+		padding-left:@sm;
+		font-size:@font-sm;
+		a{
+			padding:@xxs @sm;
+			&.active{
+				color: @xdark;
+			}
+		}
+	}
+}

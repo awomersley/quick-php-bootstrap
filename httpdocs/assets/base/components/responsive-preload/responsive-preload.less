@@ -1,0 +1,31 @@
+/* ========================================================================
+ * STAN Utils: Responsive Preload
+ * Author: Andrew Womersley
+ * ======================================================================== */
+
+ .defer-hidden{
+	visibility:hidden;
+}
+
+.resp-bgr-contain{
+    width:100%;
+    height:100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:center center;
+}
+
+.resp-bgr-cover{
+    width:100%;
+    height:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+}
+.resp-img.resp-fadein{
+  opacity:0;
+  transition: opacity 1s;
+}
+.resp-img.resp-fadein.active{
+  opacity:1;
+}

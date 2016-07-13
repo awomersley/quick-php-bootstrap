@@ -1,0 +1,14 @@
+.revealr{
+   position:relative;
+	.content{ height:300px; overflow:hidden; transition: height 1s; }
+	.reveal{ .halign-mid(); bottom:-20px; width:30px; z-index:20; cursor:pointer; }
+	.mask{
+		position:absolute; z-index:10;
+		bottom:0; left:0; width:100%; height:80px;
+		background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,@cream 100%);
+	}
+	&.revealed{
+			.reveal,.mask{ display:none; }
+			.content{ height:auto; }
+	}
+}

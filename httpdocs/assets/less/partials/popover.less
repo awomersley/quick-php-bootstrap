@@ -1,0 +1,70 @@
+.has-popover{
+
+  position:relative;
+
+  &:hover, &.hovered{
+    .popover{
+      display:block;
+    }
+  }
+
+}
+
+.popover{
+
+  position:absolute;
+  bottom:100%;
+  margin-bottom:8px;
+  z-index:10000;
+  width:auto;
+  width:300px;
+  left:50%;
+  margin-left:-150px;
+  display:none;
+  .bg-rgba(@white,0.9);
+  color:@xdark;
+  .font-sm();
+  padding:@xs;
+
+  &:after{
+    position:absolute;
+    left:50%;
+    margin-left:-8px;
+    top:100%;
+    content:" ";
+    display:block;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-bottom-color:none;
+    border-top-color: rgba(red(@white),green(@white),blue(@white),0.9);
+  }
+
+  &.pop-lg{
+    width:500px;
+    margin-left:-250px;
+  }
+
+  &.pop-left{
+    left:auto;
+    right:0;
+    margin-left:0;
+    margin-right:-10px;
+    &:after{
+      left:auto;
+      right:0;
+      margin-left:0;
+      margin-right:10px;
+    }
+  }
+
+  &.pop-right{
+    left:0;
+    margin-left:-10px;
+    &:after{
+      left:0;
+      margin-left:10px;
+    }
+  }
+
+}

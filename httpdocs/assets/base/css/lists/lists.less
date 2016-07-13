@@ -1,0 +1,57 @@
+/* ========================================================================
+ * STAN Utils: Lists
+ * Author: Andrew Womersley
+ * ======================================================================== */
+
+ul.bullet,
+ul.numeric,
+ul.alpha,
+ol.bullet,
+ol.numeric,
+ol.alpha {
+    padding:0 0 0 20px;
+    list-style-position:inside;
+}
+
+ul.icon ul,
+ol.icon ol {
+    padding-left:20px;
+}
+
+
+
+ul.bullet li,
+ol.bullet li {
+    list-style:disc;
+}
+
+ul.bullet ul li,
+ol.bullet ol li {
+    list-style:circle;
+}
+
+ul.numeric li,
+ol.numeric li {
+    list-style:decimal;
+}
+
+ul.alpha li,
+ol.alpha li {
+    list-style:lower-alpha;
+}
+
+ul.icon li,
+ol.icon li {
+    position:relative;
+    padding-left:30px;
+}
+
+ul.icon i{
+    position:absolute;
+    top:2px;
+    left:0;
+    width:16px;
+    height:16px;
+    text-align:center;
+    line-height:20px;
+}

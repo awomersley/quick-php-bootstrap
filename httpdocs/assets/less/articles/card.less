@@ -1,0 +1,65 @@
+article.card{
+
+  transition:background 0.3s;
+
+  .text{
+    border-top:solid 3px @primary;
+    padding:20px;
+  }
+
+  .mask{
+    .bg-rgba(@black, 0.65);
+    opacity:0;
+    transition:opacity 0.3s;
+  }
+
+  .main-icon{
+    .circle(96px, 0);
+    background:@primary;
+    color:@primary_contrast;
+    font-size:44px;
+    z-index:20;
+  }
+
+  &:hover{
+    .mask{
+      opacity:1;
+    }
+  }
+
+  &.white-card{
+    background:@white;
+    &:hover{
+      background:@xlight;
+    }
+  }
+
+  &.light-card{
+    background:@light;
+    &:hover{
+      background:@xlight;
+    }
+  }
+
+  &.dark-card{
+    background:@xdark;
+    h4, p{
+      color:@xdark_contrast;
+    }
+    &:hover{
+      background:@xdark_dark;
+    }
+  }
+
+  &.featured-card{
+    background:@secondary;
+    h4, p{
+      color:@secondary_contrast;
+    }
+    &:hover{
+      background:@secondary_dark;
+    }
+  }
+
+
+}

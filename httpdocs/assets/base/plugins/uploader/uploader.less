@@ -1,0 +1,26 @@
+.uploader .add{ position:relative; cursor:pointer !important; overflow:hidden; padding-bottom:5px; }
+.uploader .add a{ position:relative; z-index:10; }
+.uploader .add input{ position:absolute; top:0; left:0; width:100%; height:100px; margin-top:-50px; z-index:20; opacity:0; filter: alpha(opacity=0); cursor:pointer !important; }
+
+.uploader .file,
+.uploader .alert{ float:left; padding:6px 10px; line-height:20px; margin:0 15px 15px 0; position:relative; border-radius:4px; overflow:hidden;  }
+
+.uploader .file i,
+.uploader .alert i{ margin-left:10px; cursor:pointer; }
+
+.uploader .alert{ display:none; }
+
+.uploader .file{ border:solid 1px #e8e8e8; background:#f1f1f1; }
+.uploader .file .text{ position:relative; z-index:20; }
+.uploader .file .saprogress{ background:#bbb; position:absolute; top:0; left:0; width:0; height:100%; z-index:10; }
+.uploader .file i{ visibility:hidden; }
+
+.uploader .file.uploaded{ background:#fff; }
+.uploader .file.uploaded i:hover{ color:#444; }
+.uploader .file.uploaded .saprogress{ display:none; }
+.uploader .file.uploaded i{ visibility:visible; }
+
+.uploader .file.hide{ display:none; }
+
+.uploader iframe{ display:none; }
+.uploader img{ float:left; width:100px; height:34px; margin:0 15px 15px 0; display:none; }

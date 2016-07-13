@@ -1,0 +1,98 @@
+// Icons
+.icon-sm{ font-size:@static-sm; }
+.icon-md{ font-size:@static-md; }
+.icon-lg{ font-size:@static-lg; }
+.icon-xl{ font-size:@static-xl; }
+.icon-xxl{ font-size:@static-xxl; }
+
+.icon-box{
+	.box(@static-md,0);
+	overflow:hidden;
+}
+.icon-box-alpha{
+		opacity:0.75;
+}
+.icon-box-alpha:hover{
+	opacity:0.9;
+}
+.icon-box-sm{
+	.box(@static-sm,0);
+}
+.icon-box-lg{
+	.box(@static-lg,0);
+}
+.icon-box-xl{
+	.box(@static-xl,0);
+}
+.icon-box-xxl{
+	.box(@static-xxl,0);
+}
+
+.icon-holder {
+	height:280px;
+	width:280px;
+	border-radius:50%;
+	position: relative;
+	svg{
+		.align-mid();
+		width:50%;
+		height:50%;
+	}
+
+	.xs({
+		height:200px;
+		width:200px;
+	});
+}
+
+.icon-holder-sm{
+	height:140px;
+ 	width:140px;
+}
+
+.icon-holder-xs{
+	height:70px;
+ 	width:70px;
+}
+
+.material-icons{
+	vertical-align:middle;
+}
+
+h1 .material-icons{
+	height: @line-h1; line-height:@line-h1;
+}
+
+h2 .material-icons{
+	height: @line-h2; line-height:@line-h2;
+}
+
+h3 .material-icons{
+	height: @line-h3; line-height:@line-h3;
+}
+
+h4 .material-icons{
+	height: @line-h4; line-height:@line-h4;
+}
+
+h5 .material-icons{
+	height: @line-h5; line-height:@line-h5;
+}
+
+h6 .material-icons{
+	height: @line-h6; line-height:@line-h6;
+}
+
+p .material-icons{
+	height: @line-p; line-height:@line-p - 0.2em;
+}
+
+.label .material-icons{
+	line-height:@line-label - 0em;
+}
+
+.btn i{
+	line-height:0.6em;
+	font-size:30px;
+	max-height:19px;
+}

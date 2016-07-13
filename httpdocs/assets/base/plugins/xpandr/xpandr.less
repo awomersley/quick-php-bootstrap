@@ -1,0 +1,20 @@
+.xpandr{
+  overflow:auto;  overflow-x:hidden;
+  .show-active{
+    display:none;
+  }
+  &.xpandr-active{
+    position:fixed;
+    z-index:9999;
+    .show-active{
+      display:block;
+    }
+    .hide-active{
+        display:none;
+    }
+  }
+}
+
+.xpandr-holder{
+  .bg-rgba(@white,0.7);
+}

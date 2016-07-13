@@ -1,0 +1,107 @@
+// Slider
+.slider {
+
+  position: relative;
+
+  margin-left:-1px; //fixes bgr image bug when odd number of pixels
+
+  .next{ right:0; }
+  .prev{ left:0; }
+
+  div.next, div.prev{ width:50px; height:100px; background:url(/images/slider-arrows.png) 0 0 no-repeat; opacity:0.6; background-color: @primary; color: white; border: 2px solid red;}
+
+  div.next{ background-position:-50px 0; }
+  div.next:hover, .slider div.prev:hover{ opacity:1; }
+
+  svg.next, svg.prev{
+    width:46px; height:90px;
+    opacity:0.7;
+    &:hover{
+      opacity:1;
+    }
+  }
+
+  &.constrain{
+    max-width:1600px;
+    margin:0 auto;
+  }
+
+  .layer0{ position:relative; } // Needs to be relative for opacity on edge
+  //.layer0{ height:100%; } this breaks variable height sliders
+
+  .fgr-img{
+    position:absolute;
+    &.top-left{
+      top:10px;
+      left:10px;
+    }
+    &.top-right{
+      top:10px;
+      right:10px;
+    }
+    &.bottom-left{
+      bottom:10px;
+      left:10px;
+    }
+    &.bottom-right{
+      bottom:-10px;
+      right:10px;
+    }
+  }
+
+  .dots{
+    span {
+      background:@primary;
+      display: inline-block;
+      margin-right: 6px;
+      opacity: .9;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    span.active{ background: @secondary; }
+  }
+  .dots.dark-light{
+    span {
+      background:@xdark;
+    }
+    span.active{ background: @white; }
+  }
+  .dots.rectangle span{ border-radius:0; width:20px; height:5px; }
+
+  .thumb-holder{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    z-index:100;
+
+    .thumbs{
+      position:absolute;
+      bottom:100px;
+      left:15px;
+      right:15px;
+      padding:15px;
+      .bg-rgba(@black, 0.75);
+
+      .thumb{
+        cursor:pointer;
+        float:left;
+        margin-right:15px;
+        border:solid 4px @white;
+        &:last-child{
+          margin:0;
+        }
+        &.active{
+          border-color:@secondary;
+        }
+      }
+      img{
+        width:110px;
+      }
+
+    }
+
+  }
+
+}

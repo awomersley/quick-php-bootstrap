@@ -1,0 +1,31 @@
+
+article.developments{
+      border:3px solid @light;
+    	border-bottom-width:12px;
+    	padding:30px 30px 70px 30px;
+      text-align:left;
+
+
+      .thumb-holder{
+        position:relative;
+      }
+
+      .soldout-mask{
+        position:absolute; top:0; left:0; width:100%; height:100%; .bg-rgba(@dark, 0.7); z-index:20;
+        color:@white;
+        h4{ font-weight:400; }
+      }
+
+      .gallery-count{
+        .bg-rgba(@black, 0.9);
+        color:@white;
+        padding:@xxs @xs;
+        position:absolute;
+        z-index:10;
+        bottom:10px;
+        left:10px;
+        .span{
+          font-weight:600;
+        }
+      }
+}

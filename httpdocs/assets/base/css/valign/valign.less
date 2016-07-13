@@ -1,0 +1,41 @@
+/* ========================================================================
+ * STAN Utils: VAlign
+ * Author: Andrew Womersley
+ * ======================================================================== */
+ .valign-btm{
+    position: relative;
+    top: 100%;
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
+}
+
+
+ .align-mid{
+ 	.align-mid();
+ }
+ .align-mid-relative{
+   .align-mid-relative();
+ }
+ .valign-mid{
+ 	.valign-mid();
+ }
+ .halign-mid{
+ 	.halign-mid();
+ }
+
+ .inline-middle{
+
+   :before {
+     content: "";
+     display: inline-block;
+     vertical-align: middle;
+     height: 100%;
+   }
+
+   >*{
+     display: inline-block;
+     vertical-align: middle;
+   }
+
+ }

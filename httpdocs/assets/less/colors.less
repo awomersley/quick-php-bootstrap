@@ -1,0 +1,363 @@
+/**
+ * To update colours simply update hex colour references at top of file
+ * To add a new colour add the colour references at the top and then add the text and function references below
+ * Colours MUST be declared as // color_name // so that they are picked up in tincmce
+ *
+ * Colours can be access like;
+ * .red > sets color to red
+ * .red-hover > sets color to red on hover
+ * .bg-red > set background to red
+ * .bg-red-hover > set background to red on hover
+ * .bga6-red > sets backrground to red 60% alpha (2,4,6 and 8 available)
+ * .bga6-red-hover > sets backrground to red 60% alpha on hover (2,4,6 and 8 available)
+ * .bdr-red > sets border to red
+ * .bdr-red-hover > sets border to red on hover
+ * .btn-red > creates a red button with co-ordinated borders, hover states and contrast text color
+ */
+
+// body // (text color)
+@body: #464646;
+@body_dark: @body - 20%;
+@body_light: @body + 20%;
+@body_contrast: #fff;
+
+@body_name: escape('body');
+.colors(@body_name, @body, @body_contrast, @blank, @blank);
+//.colors(@body_name, @body_dark, @body_contrast, @dark, @under);
+//.colors(@body_name, @body_light, @body_contrast, @light, @under);
+//.colors(@body_name, @body_dark, @body_contrast, @hover, @dash);
+//.button(@body_name, @body, @body_dark, @body_contrast);
+
+
+// primary //
+@primary: #009bd5;
+// @primary: #3B70B5;
+@primary_dark: @primary - 40%;
+@primary_light: @primary + 40%;
+@primary_contrast: #fff;
+
+@primary_name: escape('primary');
+.colors(@primary_name, @primary, @primary_contrast, @blank, @blank);
+//.colors(@primary_name, @primary_dark, @primary_contrast, @darkstr, @under);
+//.colors(@primary_name, @primary_light, @primary_contrast, @lightstr, @under);
+//.colors(@primary_name, @primary_dark, @primary_contrast, @hover, @dash);
+.label(@primary_name, @primary, @primary_dark, @primary_contrast);
+.button(@primary_name, @primary, @primary_dark, @primary_contrast);
+
+
+// secondary //
+@secondary: #EB1D5D;
+@secondary_dark: @secondary - 40%;
+@secondary_light: @secondary + 40%;
+@secondary_contrast: #fff;
+
+@secondary_name: escape('secondary');
+.colors(@secondary_name, @secondary, @secondary_contrast, @blank, @blank);
+//.colors(@secondary_name, @secondary_dark, @secondary_contrast, @darkstr, @under);
+//.colors(@secondary_name, @secondary_light, @secondary_contrast, @lightstr, @under);
+//.colors(@secondary_name, @secondary_dark, @secondary_contrast, @hover, @dash);
+.label(@secondary_name, @secondary, @secondary_dark, @secondary_contrast);
+.button(@secondary_name, @secondary, @secondary_dark, @secondary_contrast);
+
+
+// tertiary //
+@tertiary: #00a78e;
+@tertiary_dark: @tertiary - 20%;
+@tertiary_light: @tertiary + 20%;
+@tertiary_contrast: #fff;
+
+@tertiary_name: escape('tertiary');
+.colors(@tertiary_name, @tertiary, @tertiary_contrast, @blank, @blank);
+//.colors(@tertiary_name, @tertiary_dark, @tertiary_contrast, @darkstr, @under);
+//.colors(@tertiary_name, @tertiary_light, @tertiary_contrast, @lightstr, @under);
+//.colors(@tertiary_name, @tertiary_dark, @tertiary_contrast, @hover, @dash);
+.label(@tertiary_name, @tertiary, @tertiary_dark, @tertiary_contrast);
+.button(@tertiary_name, @tertiary, @tertiary_dark, @tertiary_contrast);
+
+
+
+
+
+// xlight //
+@xlight: #f5f5f5;
+@xlight_dark: @xlight - 20%;
+@xlight_light: @xlight + 8%;
+@xlight_contrast: @body;
+
+@xlight_name: escape('xlight');
+.colors(@xlight_name, @xlight, @xlight_contrast, @blank, @blank);
+//.colors(@xlight_name, @xlight_dark, @xlight_contrast, @darkstr, @under);
+//.colors(@xlight_name, @xlight_light, @xlight_contrast, @lightstr, @under);
+//.colors(@xlight_name, @xlight_dark, @xlight_contrast, @hover, @dash);
+.label(@xlight_name, @xlight, @xlight_dark, @xlight - 100%);
+//.button(@xlight_name, @xlight, @xlight_dark, @xlight_contrast);
+
+
+// light //
+@light: #e5e5e5;
+@light_dark: @light - 20%;
+@light_light: @light + 8%;
+@light_contrast: @body;
+
+@light_name: escape('light');
+.colors(@light_name, @light, @light_contrast, @blank, @blank);
+//.colors(@light_name, @light_dark, @light_contrast, @darkstr, @under);
+//.colors(@light_name, @light_light, @light_contrast, @lightstr, @under);
+//.colors(@light_name, @light_dark, @light_contrast, @hover, @dash);
+.label(@light_name, @light, @light_dark, @light - 60%);
+//.button(@light_name, @light_hex, @light_dark, @light_contrast);
+
+
+
+// mid //
+@mid: #ccc;
+@mid_dark: @mid - 20%;
+@mid_light: @mid + 20%;
+@mid_contrast: #fff;
+
+@mid_name: escape('mid');
+.colors(@mid_name, @mid, @mid_contrast, @blank, @blank);
+//.colors(@mid_name, @mid_dark, @mid_contrast, @darkstr, @under);
+//.colors(@mid_name, @mid_light, @mid_contrast, @lightstr, @under);
+//.colors(@mid_name, @mid_dark, @mid_contrast, @hover, @dash);
+//.label(@mid_name, @mid, @mid_dark, @mid_contrast);
+//.button(@mid_name, @mid, @mid_dark, @mid_contrast);
+
+
+// dark //
+@dark: #999;
+@dark_dark: @dark - 20%;
+@dark_light: @dark + 20%;
+@dark_contrast: #eee;
+@dark_9: rgba(red(@dark),green(@dark),blue(@dark),0.9);
+
+@dark_name: escape('dark');
+.colors(@dark_name, @dark, @dark_contrast, @blank, @blank);
+//.colors(@dark_name, @dark_dark, @dark_contrast, @darkstr, @under);
+//.colors(@dark_name, @dark_light, @dark_contrast, @lightstr, @under);
+//.colors(@dark_name, @dark_dark, @dark_contrast, @hover, @dash);
+//.label(@dark_name, @dark, @dark_dark, @dark_contrast);
+//.button(@dark_name, @dark, @dark_dark, @dark_contrast);
+
+
+// extra dark //
+@xdark: #3a3a3a;
+@xdark_dark: @xdark - 20%;
+@xdark_light: @xdark + 20%;
+@xdark_contrast: #eee;
+@xdark_9: rgba(red(@xdark),green(@xdark),blue(@xdark),0.9);
+
+@xdark_name: escape('xdark');
+.colors(@xdark_name, @xdark, @xdark_contrast, @blank, @blank);
+//.colors(@xdark_name, @xdark_dark, @xdark_contrast, @darkstr, @under);
+//.colors(@xdark_name, @xdark_light, @xdark_contrast, @lightstr, @under);
+//.colors(@xdark_name, @xdark_dark, @xdark_contrast, @hover, @dash);
+//.label(@xdark_name, @xdark, @xdark_dark, @xdark_contrast);
+.button(@xdark_name, @xdark, @xdark_dark, @xdark_contrast);
+
+
+// white //
+@white: #fff;
+@white_dark: @white - 20%;
+@white_light: @white + 20%;
+@white_contrast: @body;
+
+@white_name: escape('white');
+.colors(@white_name, @white, @white_contrast, @blank, @blank);
+//.colors(@white_name, @white_dark, @white_contrast, @darkstr, @under);
+//.colors(@white_name, @white_light, @white_contrast, @lightstr, @under);
+//.colors(@white_name, @white_dark, @white_contrast, @hover, @dash);
+.label(@white_name, @white, @white_dark, @white_contrast);
+.button(@white_name, @white, @white_dark, @white_contrast);
+
+
+// black //
+@black: #2a2a2a;
+@black_dark: @black - 20%;
+@black_light: @black + 20%;
+@black_contrast: #fff;
+
+@black_name: escape('black');
+.colors(@black_name, @black, @black_contrast, @blank, @blank);
+//.colors(@black_name, @black_dark, @black_contrast, @darkstr, @under);
+//.colors(@black_name, @black_light, @black_contrast, @lightstr, @under);
+.colors(@black_name, @black_dark, @black_contrast, @hover, @dash);
+.button(@black_name, @black, @black_dark, @black_contrast);
+
+
+// red //
+@red: #ba1c1c;
+@red_dark: @red - 20%;
+@red_light: @red + 20%;
+@red_contrast: #fff;
+
+@red_name: escape('red');
+.color-only(@red_name, @red, @red_contrast, @blank, @blank);
+//.colors(@red_name, @red_dark, @red_contrast, @darkstr, @under);
+//.colors(@red_name, @red_light, @red_contrast, @lightstr, @under);
+//.colors(@red_name, @red_dark, @red_contrast, @hover, @dash);
+//.button(@red_name, @red, @red_dark, @red_contrast);x
+
+
+// blue //
+@blue: #3856ff;
+@blue_dark: @blue - 20%;
+@blue_light: @blue + 20%;
+@blue_contrast: #fff;
+
+@blue_name: escape('blue');
+.color-only(@blue_name, @blue, @blue_contrast, @blank, @blank);
+//.colors(@blue_name, @blue_dark, @blue_contrast, @darkstr, @under);
+//.colors(@blue_name, @blue_light, @blue_contrast, @lightstr, @under);
+//.colors(@blue_name, @blue_dark, @blue_contrast, @hover, @dash);
+//.button(@blue_name, @blue, @blue_dark, @blue_contrast);
+
+
+// yellow //
+@yellow: #ffe31c;
+@yellow_dark: @yellow - 20%;
+@yellow_light: @yellow + 20%;
+@yellow_contrast: #fff;
+
+@yellow_name: escape('yellow');
+.color-only(@yellow_name, @yellow, @yellow_contrast, @blank, @blank);
+//.colors(@yellow_name, @yellow_dark, @yellow_contrast, @darkstr, @under);
+//.colors(@yellow_name, @yellow_light, @yellow_contrast, @lightstr, @under);
+//.colors(@yellow_name, @yellow_dark, @yellow_contrast, @hover, @dash);
+//.button(@yellow_name, @yellow, @yellow_dark, @yellow_contrast);
+
+
+// green //
+@green: #00a651;
+@green_dark: @green - 20%;
+@green_light: @green + 20%;
+@green_contrast: #fff;
+
+@green_name: escape('green');
+.color-only(@green_name, @green, @green_contrast, @blank, @blank);
+//.colors(@green_name, @green_dark, @green_contrast, @darkstr, @under);
+//.colors(@green_name, @green_light, @green_contrast, @lightstr, @under);
+//.colors(@green_name, @green_dark, @green_contrast, @hover, @dash);
+//.button(@green_name, @green, @green_dark, @green_contrast);
+
+
+// purple //
+@purple: #de3eff;
+@purple_dark: @purple - 20%;
+@purple_light: @purple + 20%;
+@purple_contrast: #fff;
+
+@purple_name: escape('purple');
+.color-only(@purple_name, @purple, @purple_contrast, @blank, @blank);
+//.colors(@purple_name, @purple_dark, @purple_contrast, @darkstr, @under);
+//.colors(@purple_name, @purple_light, @purple_contrast, @lightstr, @under);
+//.colors(@purple_name, @purple_dark, @purple_contrast, @hover, @dash);
+//.button(@purple_name, @purple, @purple_dark, @purple_contrast);
+
+
+// orange //
+@orange: #ff821c;
+@orange_dark: @orange - 20%;
+@orange_light: @orange + 20%;
+@orange_contrast: #fff;
+
+@orange_name: escape('orange');
+.color-only(@orange_name, @orange, @orange_contrast, @blank, @blank);
+//.colors(@orange_name, @orange_dark, @orange_contrast, @darkstr, @under);
+//.colors(@orange_name, @orange_light, @orange_contrast, @lightstr, @under);
+//.colors(@orange_name, @orange_dark, @orange_contrast, @hover, @dash);
+//.button(@orange_name, @orange, @orange_dark, @orange_contrast);
+
+
+// modifiers
+@blank: ;
+@dash: -;
+@under: _;
+@darkstr: dark;
+@lightstr: light;
+@hover: hover:hover;
+
+@validation-error: #db341b;
+@validation-success: #6cb015;
+
+// button function
+.button(@name, @color, @dark, @contrast) {
+
+  // .btn-color
+  & .btn-@{name}{color:@contrast;background:@color;border-color:@dark; }
+
+  // .btn-color:hover
+  & .btn-@{name}:hover{color:@contrast;background:@dark;border-color:@dark;}
+
+  // .btn-outline-color
+  & .btn-outline-@{name}{color:@color;background:none;border-color:@color; }
+
+  // .btn-outline-color:hover
+  & .btn-outline-@{name}:hover{color:@contrast;background:@color;border-color:@color;}
+
+  // .btn-transparent-color
+  & .btn-transparent-@{name}{color:@contrast;background:@color;background:rgba(red(@color),green(@color),blue(@color),0.25); }
+
+  // .btn-transparent-color:hover
+  & .btn-transparent-@{name}:hover{color:@contrast;background:@color;background:rgba(red(@color),green(@color),blue(@color),0.5); }
+
+  // .btn-disabled-color
+  & .btn-disabled-@{name}{color:@contrast;background:@color;background:rgba(red(@color),green(@color),blue(@color),0.25); }
+
+}
+
+.label(@name, @color, @dark, @contrast) {
+
+  & .label-@{name}{color:@contrast;background:@color;}
+  & .label-@{name}[href]:hover, .label-@{name}[href]:focus{color:@contrast;background:@dark;}
+
+}
+
+// colors function
+.color-only(@name, @color, @contrast, @pseudo, @dash) {
+
+  // color
+  & .@{name}@{dash}@{pseudo}{color:@color;}
+
+}
+
+.bg(@color) {
+  @contrast: "@{color}_contrast";
+  background:@@color;
+  color:@@contrast;
+}
+
+// colors function
+.colors(@name, @color, @contrast, @pseudo, @dash) {
+
+  // color
+  & .@{name}@{dash}@{pseudo}{color:@color;}
+
+  // bg-color
+  & .bg-@{name}@{dash}@{pseudo}{background:@color;}
+  & .bg-@{name}@{dash}@{pseudo}.set-color{
+    color:@contrast;
+    h1,h2,h3,h4,h5,h6{
+      color:@contrast;
+    }
+  }
+
+  /* text-color
+  & html body .text-@{name}@{dash}@{pseudo} h1{color:@contrast;}
+  & html body .text-@{name}@{dash}@{pseudo} h2{color:@contrast;}
+  & html body .text-@{name}@{dash}@{pseudo} h3{color:@contrast;}
+  & html body .text-@{name}@{dash}@{pseudo} h4{color:@contrast;}
+  & html body .text-@{name}@{dash}@{pseudo} h5{color:@contrast;}
+  & html body .text-@{name}@{dash}@{pseudo} h6{color:@contrast;}
+  & html body .text-@{name}@{dash}@{pseudo}  p{color:@contrast;}*/
+
+  // .bgaX-color alpha
+  & .bga8-@{name}@{dash}@{pseudo}{background:rgba(red(@color),green(@color),blue(@color),0.8);}
+  & .bga6-@{name}@{dash}@{pseudo}{background:rgba(red(@color),green(@color),blue(@color),0.6);}
+  & .bga4-@{name}@{dash}@{pseudo}{background:rgba(red(@color),green(@color),blue(@color),0.4);}
+  & .bga2-@{name}@{dash}@{pseudo}{background:rgba(red(@color),green(@color),blue(@color),0.2);}
+
+  // bdr-color
+  & .bdr-@{name}@{dash}@{pseudo}{border:solid 1px @color;}
+
+}

@@ -1,0 +1,11 @@
+#! /bin/sh
+
+# install node and composer modules
+mkdir httpdocs/cache
+mkdir httpdocs/cache/assets
+mkdir httpdocs/cache/fonts
+bower install
+npm install
+cp -r bower_components/material-design-icons/iconfont/ httpdocs/cache/assets
+cp bower_components/jquery/dist/jquery.min.js httpdocs/cache/assets/jquery.min.js
+grunt update

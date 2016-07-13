@@ -1,0 +1,10 @@
+{
+  "name": "oj",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "~1.11.0",
+    "bootstrap": "~3.3.0",
+    "fontawesome": "~4.2.0",
+    "material-design-icons": "~2.1.3"
+  }
+}

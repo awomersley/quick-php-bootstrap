@@ -1,0 +1,82 @@
+// BS overrides
+textarea:hover, input:hover, textarea:active, input:active, textarea:focus, input:focus, button:focus, button:active, button:hover { outline:0px !important; }
+.form-control{ line-height:20px; height:34px; border-radius:0; -webkit-box-shadow:none; box-shadow:none; }
+.form-control:focus{ border-color:#aaa; box-shadow:none; }
+
+
+.input-holder.has-icon{
+  position:relative;
+  input{
+    padding-left:45px;
+  }
+  .input-icon{
+    left:13px;
+  }
+}
+
+.sa-checkbox.active{
+  i{
+    color:@primary;
+  }
+}
+
+.sa-select-multiple .sa-click span.is-selected{ color:@body; }
+
+/* Forms */
+form{ padding:0; }
+form.show-placeholder .control-label{ display:none; }
+
+.form-group.confirm{ display:none; } // this is the spam blocker field
+
+.text-form-complete{ display:none; }
+
+.form-group, .form-col{ margin-bottom:@static-sm }
+.form-group label{ margin-bottom:@xxs; font-weight:normal; }
+.form-group .form-group label{ margin-bottom:0; }
+form .fields-holder > .form-group:last-of-type{ margin-bottom:0; }
+form .form-col > .form-group:last-of-type{ margin-bottom:0; }
+form .form-row:last-child{ margin-bottom:0; }
+
+.sa-select-multiple .form-control label{ color:@body !important; }
+
+.sa-checkbox.form-group,
+.sa-radio.form-group{
+  margin-bottom:@xs;
+}
+
+
+.form-light{
+	input, select, textarea{ border:solid 1px @white; }
+}
+
+
+
+/** Disabled */
+.disabled label, .disabled .note{ color:#ddd; }
+.disabled input, .disabled select, .disabled textarea{ border:solid 1px #ddd; color:#ddd; }
+
+
+/** Notes */
+form .note{ font-size:12px; text-align:right; font-style:italic; padding-top:3px; }
+.hide-note .note{ display:none; }
+
+/** Inline */
+.inline-input-submit input{ border-top-right-radius:0; border-bottom-right-radius:0; }
+.inline-input-submit .btn{ border-top-left-radius:0; border-bottom-left-radius:0; }
+
+/** Google recaptcha **/
+.g-recaptcha {
+	height:78px;
+  margin-bottom: 15px;
+}
+
+/** Headings */
+form .heading{ clear:both; padding:20px 0 10px 0; }
+
+/** Input with Icon */
+.input-icon{ position:relative; }
+.input-icon i{ position:absolute; top:10px; left:24px; font-size:16px; }
+.input-icon input{ padding-left:30px; }
+
+/* Recaptcha plugin fix */
+body>iframe[src="about:blank"]{display:none;}

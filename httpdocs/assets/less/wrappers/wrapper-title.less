@@ -1,0 +1,109 @@
+.wrapper-title{
+
+  font-size:@size-h3;
+  font-weight:300;
+  line-height: @line-h3;
+  margin-bottom:@sm;
+  position: relative;
+
+  &.single-line{
+    span{
+      width:100%;
+      white-space: nowrap;
+      display:block;
+      height: @line-h3;
+      text-overflow: ellipsis;
+      overflow:hidden;
+    }
+  }
+
+  .module-icon{
+    left:0;
+  }
+
+  .collapse-icon, .dropdown-icon{
+    right:0;
+  }
+
+  .collapse-icon{
+    visibility:hidden;
+  }
+
+  &.title-block{
+
+    background:@secondary;
+    color:@secondary_contrast;
+    padding:@xs @sm;
+
+    .module-icon{
+      left:15px;
+    }
+
+    .collapse-icon, .dropdown-icon{
+      right:10px;
+    }
+
+  }
+
+  &.has-icon{
+    padding-left:35px;
+    &.title-block{
+      padding-left:50px;
+    }
+  }
+
+  &.has-icon-circle{
+    padding-left:55px;
+    &.title-block{
+      padding-left:70px;
+    }
+    .module-icon{
+      .circle(40px,0);
+      background:@primary;
+      color:@primary_contrast;
+    }
+  }
+
+  &.has-collapse-icon{
+    padding-right:35px;
+    &.title-block{
+      padding-right:50px;
+    }
+  }
+
+  .mobile({
+      &.has-collapse-icon{
+        padding-right:30px;
+        &.title-block{
+          padding-right:30px;
+        }
+      }
+      .collapse-icon{
+        visibility:visible;
+      }
+  });
+
+  // Modifiers set by wrapper
+  .sa-click &{
+    margin-bottom:0;
+  }
+
+}
+
+
+
+.title-headline{
+  overflow: hidden; text-align: center;
+  span{
+    position: relative; display: inline-block;
+    &:before, &:after{
+      content:''; position: absolute; top: 50%; border-bottom: 1px solid @mid; width: 1000px; margin: 0 20px;
+    }
+    &:before{
+      right: 100%;
+    }
+    &:after{
+      left: 100%;
+    }
+  }
+}

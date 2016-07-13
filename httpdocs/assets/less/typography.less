@@ -1,0 +1,122 @@
+// Defaults
+html{
+	.xs({
+		font-size: @space_xs;
+	});
+	.sm({
+		font-size: @space_sm;
+	});
+	.md({
+		font-size: @space_md;
+	});
+	.lg({
+		font-size: @space_lg;
+	});
+}
+body{
+	font-family:'Open Sans', Arial, sans-serif; -webkit-font-smoothing: antialiased; color:@body; font-size: @base_lg; line-height: @line-body; font-weight: @weight-body;
+
+	.xs({
+		h1{ font-size:@size-h1 - 0.5em; }
+		h2{ font-size:@size-h2 - 0.3em; }
+		h3{ font-size:@size-h3 - 0.3em; }
+	});
+	.sm({
+		h1{ font-size:@size-h1 - 0.3em; }
+		h2{ font-size:@size-h2 - 0.1em; }
+		h3{ font-size:@size-h3 - 0.1em; }
+	});
+
+}
+
+.text-responsive{ // Makes text scale down on smaller devices
+	h1{ font-size:@size-h1; }
+	h2{ font-size:@size-h2; }
+	h3{ font-size:@size-h3; }
+	p.lead{ font-size:@size-lead; }
+	.xs({
+		font-size: @base_xs;
+	});
+	.sm({
+		font-size: @base_sm;
+	});
+	.md({
+		font-size: @base_md;
+	});
+	.lg({
+		font-size: @base_lg;
+	});
+}
+
+.text-headline{ // Scales up text
+
+  font-size:22px;
+
+  .xs({
+		font-size:16px;
+	});
+
+  .sm({
+		font-size:18px;
+	});
+
+}
+
+
+// Headings
+h1,h2,h3,h4,h5,h6{ color:@heading-color; } // This will be overridden if heading sits inside a bg-color wrapper to work around this add .base-colors to the wrapper around the heading
+.base-colors{ h1,h2,h3,h4,h5,h6{ color:@heading-color; } }
+h1{ font-size:@size-h1; font-weight:@weight-h1; margin:@margin-h1; line-height: @line-h1; }
+h2{ font-size:@size-h2; font-weight:@weight-h2; margin:@margin-h2; line-height: @line-h2; }
+h3{ font-size:@size-h3; font-weight:@weight-h3; margin:@margin-h3; line-height: @line-h3; }
+h4{ font-size:@size-h4; font-weight:@weight-h4; margin:@margin-h4; line-height: @line-h4; }
+h5{ font-size:@size-h5; font-weight:@weight-h5; margin:@margin-h5; line-height: @line-h5; }
+h6{ font-size:@size-h6; font-weight:@weight-h6; margin:@margin-h6; line-height: @line-h6; }
+p{ font-size:@size-p; line-height: @line-p; margin:@margin-p; }
+p.lead{ font-size:@size-lead; margin:@margin-lead; line-height: @line-lead;  }
+
+ul, ol, table{ line-height: @line-p; font-size:@size-p;}
+
+h1:last-child,h2:last-child,h3:last-child,h4:last-child,h5:last-child,h6:last-child,
+.title-h1:last-child,.title-h2:last-child,.title-h3:last-child,.title-h4:last-child,.title-h5:last-child,.title-h6:last-child,
+p:last-child{ margin-bottom:0; }
+
+
+
+
+// Web font loader
+/*h1,h2,h3,h4,h5,h6,p,nav,.module-title,.wf-text{ opacity:0; transition:opacity 0.3s; }
+.wf-active, .wf-inactive{
+  h1,h2,h3,h4,h5,h6,p,nav,.module-title,.wf-text{ opacity:1; }
+}*/
+
+// Modifiers
+.font-xs{ font-size:@font-xs; }
+.font-sm{ font-size:@font-sm; }
+.font-md{ font-size:@font-md; }
+.font-lg{ font-size:@font-lg; }
+.font-xl{ font-size:@font-xl; }
+.font-xxl{ font-size:@font-xxl; }
+
+.font-light{ font-weight: @thin; }
+.font-normal{ font-weight: @normal; }
+.font-semi{ font-weight: @semi-bold; }
+.font-bold{ font-weight: @bold; }
+
+// Links
+a{
+	border: 0px;
+	color: @primary;
+	text-decoration:none;
+}
+a:hover{
+	color: @primary_dark;
+	text-decoration:none;
+}
+a.ul-only{
+	color:inherit !important;
+	text-decoration:underline;
+	&:hover{
+		text-decoration:none;
+	}
+}

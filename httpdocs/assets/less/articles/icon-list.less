@@ -1,0 +1,47 @@
+.icon-list{
+
+  position:relative;
+	margin-bottom: @sm;
+
+  &:last-child{
+    margin-bottom:0;
+  }
+
+
+  a {
+    padding-left:@static-lg;
+		display: block;
+	}
+
+	i{
+    position:absolute;
+    top:0; left:0;
+		.icon-md();
+	}
+
+  .info{
+    .font-xs();
+    color:@mid;
+  }
+
+  &.icon-bgr{
+
+    a {
+      padding-left:@static-lg + 15;
+      &:hover{
+        i{
+          background:@primary_dark;
+        }
+      }
+    }
+
+    i{
+      background:@primary;
+      color:@primary_contrast;
+      .icon-box();
+      .icon-box-lg();
+    }
+
+  }
+
+}

@@ -1,0 +1,13 @@
+/** Failed */
+.failed {
+	label{ color:@validation-error; }
+	input, select, textarea{ border:solid 1px @validation-error; }
+	.validation { color: @validation-error; font-size:@font-sm; text-align:left; }
+}
+.form-light{
+	.failed {
+		label{ color:@white; }
+		input, select, textarea{ border:solid 1px @white; }
+		.validation { color: @white; }
+	}
+}

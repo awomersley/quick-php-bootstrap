@@ -1,0 +1,43 @@
+.breadcrumb {
+
+  .font-sm();
+
+  li + li{
+    margin-left:20px;
+  }
+
+  li+li:before {
+    content:"\E5CC"; font-family:'Material Icons';
+    padding:0;
+    position:absolute;
+    top:1px;
+    left:-17px;
+  }
+
+  li{
+    color: @dark;
+  }
+
+  a {
+    color: @dark;
+    &:hover {
+      color: @xdark;
+    }
+  }
+
+  &.breadcrumb-light{
+
+    li{
+      color: @xlight;
+    }
+
+    a {
+      color: @xlight;
+      &:hover {
+        color: @white;
+      }
+    }
+
+  }
+
+}

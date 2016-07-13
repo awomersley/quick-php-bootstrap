@@ -1,0 +1,150 @@
+// Common
+.responsive-nav-mask, .header-mask{ width:100%; height:100%; height:100%; position:fixed; z-index:2000; display:none; top:0; left:0; }
+.header-mask{ position:absolute; }
+
+.responsive-nav-mask{
+    .buttons{
+      position:absolute;
+      left:0; width:100%;
+      bottom:15px; z-index:3000;
+    }
+}
+
+.responsive-nav {
+
+  position:  absolute;
+
+  .desktop({
+
+    width: 100%;
+    z-index: 200;
+
+    // Right aligned
+    &.right ul {
+      text-align:  right;
+      ul {
+        text-align:left;
+      }
+    }
+
+    nav {
+      position: relative;
+      z-index: 20;
+    }
+
+    li {
+      position: relative;
+      &:hover, &.hovered {
+        z-index: 999;
+        > .sub {
+          visibility: visible;
+        }
+      }
+    }
+
+    .sub {
+      top: 0;
+      padding: 0;
+      position: absolute;
+      left: 100%;
+      visibility: hidden;
+      width: 100%;
+      min-width:150px;
+      max-width: 500px;
+      text-align:left;
+
+      li {
+        a {
+          display: block;
+          padding: 10px @sm;
+        }
+      }
+
+    }
+
+    .level1 {
+
+      display: inline-block;
+
+      & > .sub {
+        top: 100%;
+        left: -@sm;
+      }
+
+      .sub.right {
+        left: auto;
+        right: 0;
+      }
+
+    }
+
+  });
+
+  .mobile({
+
+    left: 0;
+    overflow: hidden;
+    top: 100%;
+    z-index: 100001;
+    text-align:center;
+    opacity:0;
+    display:none;
+
+    .container{
+      padding:0;
+    }
+
+    nav {
+
+      padding: 0;
+
+      ul {
+        height: auto;
+        overflow: auto;
+      }
+
+    }
+
+    li {
+      position: relative;
+      line-height: 20px;
+    }
+
+    .link-icon{ width: 40px; height: 40px; line-height: 40px; position: absolute; top: 0; right: 15px; text-align: center; }
+
+    a {
+      display: block;
+      padding: 10px 0;
+    }
+
+    .level2{
+      a{
+        font-size:@font-sm;
+        padding:8px 0;
+      }
+      .link-icon {
+        left:28px;
+      }
+    }
+
+    .sub {
+      display: block;
+      .sub{
+        display:none;
+      }
+    }
+
+    &.nav-drop{
+      width: 100%;
+    }
+
+    &.nav-slide{
+
+      width: 80%; max-width: 300px; .transform( translateX(-100%) );
+      &.active{ .transform( translateX(0) ); }
+
+    }
+
+  });
+
+}

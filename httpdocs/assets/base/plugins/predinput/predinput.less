@@ -1,0 +1,51 @@
+/* ========================================================================
+ * STAN Utils: PredInput
+ * Author: Andrew Womersley
+ * ======================================================================== */
+
+.predinput{
+
+  position:relative;
+
+  .results{
+
+    position:absolute; display:none; top:100%; width:100%; left:0; height:auto; z-index:300; background:#ffffff; overflow:auto;
+
+    &.active{ display:block; border:solid 1px #ccc; box-shadow: 0 2px 4px rgba(0,0,0,0.2);  }
+
+    &.sm-height{ max-height:100px; }
+    &.md-height{ max-height:200px; }
+    &.lg-height{ max-height:300px; }
+    &.sm-width{ width:100px; }
+    &.md-width{ width:200px; }
+    &.lg-width{ width:300px; }
+
+  }
+
+  ul{
+    padding:0; margin:0;
+  }
+
+  li{
+
+    line-height:16px; padding:5px 10px; cursor:pointer; list-style:none;
+
+    &:first-child{ }
+
+    &.sm-pad{ padding:7px 10px; }
+    &.md-pad{ padding:10px 15px; }
+    &.lg-pad{ padding:15px 30px; }
+    &.selected{ background:#eeeeee; }
+    &.disabled{ color:#aaa; }
+
+  }
+
+  input::-ms-clear { display: none; }
+
+  .search-box{ padding-left:40px; }
+
+  .clear-icon{ .valign-mid(); right:10px; cursor:pointer; display:none; }
+  .search-icon{ .valign-mid(); left:10px; }
+
+  textarea{ display:none; }
+}

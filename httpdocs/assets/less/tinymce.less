@@ -1,0 +1,96 @@
+// Headings
+.cms {
+  //h1:not(:first-child), h2:not(:first-child), h3:not(:first-child), h4:not(:first-child), h5:not(:first-child), h6:not(:first-child){
+
+  h1,h2,h3,h4,h5,h6{
+    //color:@heading-color;
+  }
+
+  p + h1, p + h2, p + h3, p + h4, p + h5, p + h6,
+  ul + h1, ul + h2, ul + h3, ul + h4, ul + h5, ul + h6{
+    margin-top: 1.5em;
+  }
+
+  h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6{
+    margin-top:0;
+  }
+
+}
+
+// A links
+.cms a:not(.btn){
+  text-decoration:underline;
+  &:hover{
+    text-decoration:none;
+  }
+}
+
+
+// Bullets
+.cms{
+  ul{
+    margin:@sm 0;
+
+    ul{
+      margin:@xs 0 @sm @sm;
+    }
+  }
+  li{
+    margin-bottom:@xs;
+    li{
+      margin-bottom:@xxs;
+    }
+  }
+
+  li:last-child{
+    margin-bottom:0;
+  }
+}
+
+// Columns
+.cms{
+  .row, .snippet{
+    clear:both; margin-top:@md; margin-bottom:@md;
+  }
+  .cms-img{ margin: 0; }
+}
+
+// Last child fix
+.cms :last-child{ margin-bottom:0 !important; }
+
+// Tables
+table{ width:100%; padding:0; }
+table.valigntop td, table.col td{ vertical-align:top; }
+
+// Img floats
+.cms-img{
+
+  .inner{
+    position:relative;
+  }
+
+  img{ display:block; width:100%; margin:0 auto; }
+
+  &.right{ clear:right; float:right; margin:5px 0 30px 15px; padding-right:0; padding:0 !important; }
+  &.left{ clear:left; float:left; margin:5px 15px 30px 0; padding-left:0; padding:0 !important; }
+
+  &.center{
+    display:block; margin:@md auto;
+    &.sml{
+      width:33%;
+    }
+    &.med{
+      width:50%;
+    }
+    &.big{
+      width:100%;
+    }
+  }
+
+  .xs({
+      margin-left:0 !important; margin-right:0 !important; float:none !important; width:100% !important; text-align:center;
+      .inner{ display:inline-block; }
+      img{ max-width:100%; width:auto; }
+  });
+
+}

@@ -1,0 +1,72 @@
+// Header
+header{
+
+  background:@light;
+  height:120px;
+  //padding-bottom:50px; // Set this  when using full width nav bar
+  position:relative;
+  z-index:1000;
+  width:100%;
+
+  .inner{
+    height:100%;
+    padding-top:15px;
+    padding-bottom:15px;
+  }
+
+  .logo{
+    width:132px;
+    height:38px;
+  }
+
+  .top-nav{
+    position:absolute; top:19px; right: 380px; font-size:@font-sm;
+    li{ margin-left:30px; }
+    a {color:@body;}
+    a:hover{ color:@dark; }
+  }
+
+
+  .mobile({
+
+    height:auto;
+    //padding-bottom:0; // Set this  when using full width nav bar
+
+    .container{
+      width:100%;
+    }
+
+    .mobile-nav{
+      .valign-mid(); right:0; z-index:2001;
+      li{ float:right; margin-left:20px; }
+      a{
+        padding:20px;
+        color:@primary;
+        &.active{
+          color:@white;
+        }
+      }
+    }
+
+    .top-nav{
+      display:none;
+    }
+
+  })
+
+}
+
+.header-cta{
+  position:absolute; top:10px; right: 15px;
+  .sm({
+    right:100px;
+  });
+  .tel{ line-height:38px; display:inline-block; padding-right:10px; vertical-align:middle; }
+}
+
+.scroll-cta{
+  position:fixed; top:-65px; left:0; width:100%; z-index:9998;
+  .container{
+    height:60px;
+  }
+}

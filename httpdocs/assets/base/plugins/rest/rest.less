@@ -1,0 +1,23 @@
+.rest-loader{
+  .rest-load-more{
+    display:none; text-align:center;
+  }
+  .rest-no-results{
+    display:none;
+  }
+  .rest-active{
+
+  }
+  .rest-inactive{
+    display:none;
+  }
+  .rest-updated{
+    width:100%; height:100%; position:absolute; top:0; left:0; .bg-rgba(@white,0.9); border-radius:2px; display:none;
+  }
+}
+
+.rest-toast{
+  position:fixed; bottom:24px; left:24px; background:@dark; color:@white; border-radius:2px; padding:15px; display:none; z-index:1000;
+  .undo { margin:0 30px 0 50px; }
+  .undo-close { position:absolute; right:15px; top:15px; }
+}

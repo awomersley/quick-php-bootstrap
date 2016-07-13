@@ -1,0 +1,38 @@
+// Alerts
+.sa-alert {
+
+  position:relative; padding-left:60px;  margin-bottom:@sm; text-align:left;
+
+  h4{ margin-bottom:@xs; }
+
+  i{ position:absolute; top:0; left:0; }
+
+  &.has-icon{
+     padding-left:60px;
+  }
+  
+  &.sa-alert-danger{
+    color:#db341b;
+  }
+
+  &.sa-alert-success{
+    color:#6cb015;
+  }
+
+}
+
+.form-light {
+
+  .sa-alert {
+
+    &.sa-alert-danger{
+      color:@white;
+    }
+
+    &.sa-alert-success{
+      color:@white;
+    }
+
+  }
+
+}

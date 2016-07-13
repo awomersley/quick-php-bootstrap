@@ -1,0 +1,45 @@
+// Pop up window
+.popup{
+
+  .popup-display, .popup-content {
+    background:#fff;
+  }
+
+  .popup-content{
+    position:relative;
+    z-index:20;
+  }
+
+  .popup-close{
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:50;
+    cursor:pointer;
+  }
+
+  .popup-title{
+    position:absolute !important;
+    top:0;
+    left:0;
+    right:0;
+    z-index:100;
+  }
+
+  .popup-pad{
+    padding:@sm;
+    padding-top:0;
+    &:before{
+      content: " ";
+      display:block;
+      height:@sm;
+    }
+  }
+
+  &.popupiframe{
+    .popup-close{
+       -webkit-transform: translateY(-100%); -ms-transform: translateY(-100%); transform: translateY(-100%);
+    }
+  }
+
+}

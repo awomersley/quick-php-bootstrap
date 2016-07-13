@@ -1,0 +1,147 @@
+@tileblockheight_small: 400px;
+@tileblockheight_small_md: 400px;
+@tileblockheight_small_sm: 300px;
+@tileblockheight_small_xs: 250px;
+
+@tileblockheight_medium: 500px;
+@tileblockheight_medium_md: 500px;
+@tileblockheight_medium_sm: 400px;
+@tileblockheight_medium_xs: 300px;
+
+@tileblockheight_large: 700px;
+@tileblockheight_large_md: 600px;
+@tileblockheight_large_sm: 500px;
+@tileblockheight_large_xs: 400px;
+
+.tile-blocks-holder{
+  border:2px solid @white;
+  margin-left:-4px;
+  margin-right:-4px;
+}
+
+.tile-block{
+
+  position:relative;
+  float:left;
+  overflow:hidden;
+  border:2px solid @white;
+
+  &.tile-small{
+    width:33.33333333%;
+  }
+
+  &.tile-medium{
+    width:50%;
+  }
+
+  &.tile-large{
+    width:100%;
+  }
+
+  .mask{
+    position:absolute;
+    top:0; left:0; width:100%; height:100%;
+  }
+
+  .fgr-holder{
+    .align-mid();
+    width:100%;
+    text-align: center;
+  }
+
+  .fgr-inner{
+    display:inline-block;
+    padding: @md;
+  }
+
+  &.mask-hover{
+    .mask {
+      opacity:0;
+      transition:opacity 0.5s;
+    }
+    &:hover, &.hovered{
+      .mask{ opacity:1; }
+    }
+  }
+
+  .title{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:30;
+    background:@primary;
+    color:@primary_contrast;
+    padding:@xxs @xs;
+  }
+
+  .lg({
+
+    &.tile-small{
+      height: @tileblockheight_small;
+    }
+
+    &.tile-medium{
+      height: @tileblockheight_medium;
+    }
+
+    &.tile-large{
+      height: @tileblockheight_large;
+    }
+
+  });
+
+  .md({
+
+    &.tile-small{
+      height: @tileblockheight_small_md;
+    }
+
+    &.tile-medium{
+      height: @tileblockheight_medium_md;
+    }
+
+    &.tile-large{
+      height: @tileblockheight_large_md;
+    }
+
+  });
+
+  .sm({
+
+    &.tile-small{
+      height: @tileblockheight_small_sm;
+    }
+
+    &.tile-medium{
+      height: @tileblockheight_medium_sm;
+    }
+
+    &.tile-large{
+      height: @tileblockheight_large_sm;
+    }
+
+  });
+
+
+  .xs({
+
+    float:none;
+
+    &.tile-small{
+      height: @tileblockheight_small_xs;
+      width:100%;
+    }
+
+    &.tile-medium{
+      height: @tileblockheight_medium_xs;
+      width:100%;
+    }
+
+    &.tile-large{
+      height: @tileblockheight_large_xs;
+      width:100%;
+    }
+
+  });
+
+}

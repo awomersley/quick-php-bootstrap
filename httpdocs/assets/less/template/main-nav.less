@@ -1,0 +1,90 @@
+.responsive-nav-mask, .header-mask{ .bg-rgba(@primary,0.95); }
+
+.responsive-nav {
+
+  .desktop({
+
+    bottom: 15px; // Set to 0 when using full width bar
+    left: 15px;  // Set to 0 when using full width bar
+    // background-color:@primary; // Set this  when using full width nav bar
+
+    .level1 {
+
+      margin-right: @sm;
+
+      & > a {
+
+        color: @primary;
+        font-weight:400;
+        font-size:15px;
+
+        // Set this  when using full width nav bar
+        //color: @primary_contrast;
+        //line-height:50px;
+        //display:block;
+
+        &.active {
+          font-weight: 700;
+        }
+
+      }
+
+      & > .sub{
+        padding-top:15px; // Set to 0 when using full width bar
+      }
+
+    }
+
+    .level2{
+
+      a {
+        background: @xdark;
+        color: @white;
+      }
+
+      a:hover, a.active {
+        background: @black;
+      }
+
+    }
+
+    .level3{
+
+      a {
+        background: @light;
+        color: @xdark;
+      }
+
+      a:hover, a.active {
+        background: @light_dark;
+      }
+
+    }
+
+  });
+
+  .mobile({
+
+    nav{
+      border-top: solid 1px rgba(255,255,255,0.2);
+    }
+
+    li.active {
+      background: @primary;
+    }
+
+    a {
+      color: @primary_contrast;
+    }
+
+    .level1{
+      border-bottom: solid 1px rgba(255,255,255,0.2);
+    }
+
+    .collapse-icon, .link-icon{
+      color: @primary_contrast;
+    }
+
+  });
+
+}

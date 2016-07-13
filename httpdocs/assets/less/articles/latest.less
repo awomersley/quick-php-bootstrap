@@ -1,0 +1,27 @@
+article.latest{
+
+  position:relative;
+
+  &.has-image{
+    min-height:75px;
+    padding-left:90px;
+  }
+
+  img{
+    position:absolute;
+    top:0; left:0;
+  }
+
+  .date{
+    margin-bottom:@xxs;
+    font-size: @font-sm;
+    color: @dark;
+  }
+
+  &:hover{
+    .title{
+      color:@primary;
+    }
+  }
+
+}

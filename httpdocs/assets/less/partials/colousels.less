@@ -1,0 +1,11 @@
+// Colousel
+.colousel{
+  &.end .colousel-next, &.start .colousel-prev{
+    opacity:0.5; cursor:default;
+  }
+  &.start.end{
+    .colousel-next, .colousel-prev{
+      display:none;
+    }
+  }
+}

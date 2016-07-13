@@ -1,0 +1,55 @@
+/* ========================================================================
+ * STAN Utils: Dropdown
+ * Author: Andrew Womersley
+ * ======================================================================== */
+
+.sa-dropdown{
+
+  position:relative;
+  overflow:hidden;
+  z-index:50;
+
+  .sa-click{
+    cursor:pointer;
+    z-index:20;
+    position:relative;
+  }
+
+  .module-title{
+    margin-bottom:0 !important;
+  }
+
+  .dropdown-icon{
+    .valign-mid();
+    right:15px;
+    color:#aaa;
+  }
+
+  .dropdown-content{
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:100%;
+    visibility:hidden;
+    z-index:10;
+  }
+
+  &.sa-right .dropdown-content{
+    left:auto;
+    right:0;
+  }
+
+  &.active{
+    overflow:visible;
+
+    .sa-click{
+      border-bottom-color:transparent;
+    }
+
+    .dropdown-content{
+      visibility:visible;
+    }
+
+  }
+
+}

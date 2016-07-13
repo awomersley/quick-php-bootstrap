@@ -1,0 +1,51 @@
+/* ========================================================================
+ * STAN Utils: Colousel
+ * Author: Andrew Womersley
+ * ======================================================================== */
+
+.colousel{
+  position:relative;
+  .colousel-mask{
+    position:relative;
+    overflow:hidden;
+    height:100%;
+  }
+  .colousel-inner{
+    position:absolute;
+    top:0;
+    left:0;
+    min-width:100%;
+  }
+  .colousel-col{
+    float:left;
+    padding:0 15px;
+  }
+  .colousel-prev,
+  .colousel-next{
+    cursor:pointer;
+    position:absolute;
+    z-index:20;
+  }
+  .colousel-prev{
+    left:0;
+  }
+  .colousel-next{
+    right:0;
+  }
+  &.colousel-start{
+    .colousel-prev{ opacity:0.3; }
+  }
+  &.colousel-end{
+    .colousel-next{ opacity:0.3; }
+  }
+}
+
+.mobile .colousel{
+  .colousel-mask{
+    overflow:auto;
+  }
+  .colousel-prev,
+  .colousel-next{
+    display:none;
+  }
+}

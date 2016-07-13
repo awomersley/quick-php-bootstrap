@@ -1,0 +1,65 @@
+/**
+* Add the following classes to a module to style in a panel
+*
+* .panel
+* .panel-block
+* .panel-underline
+*/
+
+.panel{
+
+  .panel-bgr{
+    background:@xlight;
+    border:solid 1px @xlight_dark;
+    padding-left:@sm;
+    padding-right:@sm;
+    .inner(@sm);
+  }
+
+  .panel-pad{
+
+  }
+
+  .collapse-content{
+    .before(@sm);
+  }
+
+  &.panel-plain{
+    .wrapper-title:not(.has-icon-circle){
+      border-bottom:solid 1px @light;
+      padding-bottom:@xs;
+    }
+  }
+
+  &.panel-block{
+    .wrapper-title{
+      margin-bottom:0;
+    }
+    .panel-bgr{
+      border-top:none;
+    }
+    .nav-vertical-styled{
+      margin:-@sm;
+      ul{
+        border-top:none;
+      }
+      li:last-child{
+        border-bottom:none;
+      }
+      .matches{
+    		right:@sm;
+      }
+      a{
+        margin-left:-1px
+      }
+    }
+  }
+
+}
+
+
+// no title desktop
+.desktop .hide-click-desktop{
+  .sa-click{ display:none; }
+  .collapse-content:before{ height:0; }
+}

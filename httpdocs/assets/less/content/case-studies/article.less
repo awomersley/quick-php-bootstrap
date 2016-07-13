@@ -1,0 +1,29 @@
+article.case-study {
+
+	.text{
+		text-align:center;
+		.bg('xlight');
+		padding:@sm;
+		transition:background 0.3s;
+		> *{
+			transition:color 0.3s;
+		}
+	}
+
+	.mask {
+		opacity: 0;
+		transition:opacity 0.3s;
+		.bg-rgba(@black, 0.8);
+	}
+
+	&:hover {
+		.text{
+			background:@primary;
+			color:@primary_contrast;
+		}
+		.mask {
+			opacity: 1;
+		}
+	}
+
+}

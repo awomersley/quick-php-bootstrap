@@ -1,0 +1,25 @@
+//Buttons
+.btn{
+  transition:background 0.3s, border 0.3s, color 0.3s;
+  border-radius:0; font-size:@size-p; line-height:20px; position:relative; overflow:hidden; white-space:normal;
+  &:hover, &:focus, &:active, &.active{ -webkit-box-shadow:none; box-shadow:none; }
+
+  &.btn-icon{
+    padding-right:@static-lg;
+    i{ right:@static-sm; .valign-mid(); }
+  }
+
+  &.btn-icon-left{
+    padding-left:@static-lg;
+    i{ left:@static-sm; .valign-mid(); }
+  }
+
+  &.btn-sm{
+    padding:5px 10px; .font-xs();
+  }
+
+  &.btn-lg{
+    padding:10px 15px; .font-lg();
+  }
+
+}

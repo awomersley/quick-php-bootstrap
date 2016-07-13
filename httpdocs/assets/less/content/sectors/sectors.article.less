@@ -1,0 +1,47 @@
+article.sectors{
+
+  .text{
+    padding: @sm;
+    text-align:center;
+    transition:background 0.5s;
+
+    .sm({
+      text-align:left;
+      padding-top:0;
+    });
+
+  }
+
+  .title{
+    margin-bottom:@xs;
+  }
+
+  .cta{
+    margin-top:@sm;
+  }
+
+  h4{
+    transition:color 0.5s;
+  }
+  .btn{
+    transition:all 0.5s;
+  }
+
+  &:hover{
+
+    h4{
+      color:@white;
+    }
+    .text{
+        background:@primary;
+    }
+
+    .btn {
+      background:@white;
+      color:@black;
+      border:1px solid @white;
+    }
+
+  }
+
+}

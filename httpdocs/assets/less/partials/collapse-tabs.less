@@ -1,0 +1,91 @@
+// Collapse tabs
+.sa-collapse-tabs{
+
+    position: relative;
+    z-index: 950;
+
+  .tab-nav{
+
+    border-bottom:solid 3px @primary;
+
+    li{
+      background:@light;
+      margin-right:@xs;
+      display:inline-block;
+      position:relative;
+
+      a{
+        display:block;
+        color:@xdark;
+        padding:0 @sm;
+        line-height:50px;
+        font-size:18px;
+        i{
+          font-size:32px;
+        }
+      }
+
+      &:hover{
+        background:@light_dark;
+        a{
+          //color:@primary_contrast;
+        }
+        i{
+          //color:@dark;
+        }
+      }
+
+      &.active{
+        background:@primary;
+        a,i{
+          color:@primary_contrast;
+        }
+      }
+
+      &.primary{
+        background:@primary;
+
+        &.active, &:hover{
+          background:@primary_dark;
+          a{ color:@white; }
+          i{ color:@white; }
+        }
+      }
+    }
+
+  }
+
+  .collapse-nav{
+    padding:@sm 0;
+    background:@light;
+    color:@light_contrast;
+    position:relative;
+
+    &.has-icon .title{
+      padding-left:35px;
+    }
+
+    i{
+      position:absolute;
+      top:5px;
+    }
+    .tab-icon{
+      left:15px;
+    }
+
+    .collapse-icon{
+      right:15px;
+    }
+  }
+
+  .active>.collapse-nav{
+    background:@primary;
+    color:@primary_contrast;
+  }
+
+  .tab-pane{
+    //margin-bottom:@xs;
+    border-bottom:solid 1px @mid;
+  }
+
+}

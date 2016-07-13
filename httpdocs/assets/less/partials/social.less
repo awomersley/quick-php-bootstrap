@@ -1,0 +1,136 @@
+// Social Share Icons
+// DO NOT CHANGE THESE VALUES
+// IF GREY ICONS ARE REQUIRED - USE THE PLAIN SOCIAL MODULE
+@twitter: #5A8DD4;
+@facebook: #364289;
+@linkedin: #2D63AB;
+@google: #d61616;
+@pinterest: #AB1B19;
+@instagram: #8D6649;
+@youtube: #AB1A13;
+@email: #738e8e;
+
+.social-icons{
+
+  .social-icon{
+    display:inline-block;
+    margin:0 @xs 0 0;
+    &:last-child{
+      margin-right:0;
+    }
+  }
+
+  .icon-plain{
+    .box(24px,0);
+    path{
+      fill: @light;
+    }
+  }
+
+  a{ display:block; }
+
+  .icon-plain.icon-color{
+
+    svg{
+      width:24px;
+      height:24px;
+    }
+
+    &.linkedin{
+      path{
+        fill: @linkedin;
+      }
+    }
+    &.facebook{
+      path{
+        fill: @facebook;
+      }
+    }
+    &.twitter{
+      path{
+        fill: @twitter;
+      }
+    }
+    &.google{
+      path{
+        fill: @google;
+      }
+    }
+    &.pinterest{
+      path{
+        fill: @pinterest;
+      }
+    }
+    &.youtube{
+      path{
+        fill: @youtube;
+      }
+    }
+    &.instagram{
+      path{
+        fill: @instagram;
+      }
+    }
+  }
+
+  .icon-bgr{
+
+    .circle(36px,8px);
+
+    svg{
+      width:20px;
+      height:20px;
+    }
+
+    &:after{
+      border-radius:18px;
+    }
+
+    background:@light;
+
+    path{
+      fill: @dark;
+    }
+
+    &:hover{
+      background:@dark;
+
+      path{
+        fill: @light;
+      }
+    }
+
+  }
+
+  .icon-bgr.icon-color{
+
+    position:relative;
+
+    &.linkedin{
+      background: @linkedin;
+    }
+    &.facebook{
+      background: @facebook;
+    }
+    &.twitter{
+      background: @twitter;
+    }
+    &.google{
+      background: @google;
+    }
+    &.pinterest{
+      background: @pinterest;
+    }
+    &.youtube{
+      background: @youtube;
+    }
+    &.instagram{
+      background: @instagram;
+    }
+    path{
+      fill: @white;
+    }
+
+  }
+
+}

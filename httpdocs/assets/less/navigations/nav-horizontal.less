@@ -1,0 +1,105 @@
+/*
+--------------------------------------------------------------
+N A V  H O R I Z O N T A L  - - P L A I N
+-------------------------------------------------------------- */
+.nav-horizontal-plain {
+
+  li {
+  	display:inline-block;
+  	position:relative;
+
+    + li {
+      margin-left: @sm;
+    }
+
+    .sub{
+      position:absolute;
+      top:100%;
+      left:0;
+      display:none;
+      padding-top:5px;
+      z-index:1000;
+    }
+
+    ul{
+
+      background:@white;
+      border:solid 1px @mid;
+      padding:@xs;
+
+      li{
+        margin-left:0;
+        display:block;
+
+        + li {
+          margin-top: @xxs;
+        }
+
+      }
+
+    }
+
+    &:hover .sub{
+      display:block;
+    }
+
+ 	}
+
+  a{
+    &.active{
+      font-weight:700;
+    }
+  }
+
+}
+
+
+/*
+--------------------------------------------------------------
+N A V  H O R I Z O N T A L  - - S T Y L E D
+-------------------------------------------------------------- */
+.nav-horizontal-styled {
+
+  transition: all 0.5s;
+  text-align: left;
+
+  ul {
+    margin-top: 0;
+  }
+
+  li {
+
+    display: inline-block;
+
+    + li{
+      margin-left:@sm;
+    }
+
+  }
+
+  a {
+    border-bottom: 5px solid transparent;
+    display: block;
+    padding: 15px 0 11px 0;
+    &:hover, &.active {
+      border-bottom-color: @primary;
+      color: inherit;
+      font-weight: @normal;
+    }
+  }
+
+  &.nav-dark{
+    background: @primary;
+    a {
+      color:@white;
+      &:hover, &.active {
+        border-bottom-color: @primary_dark;
+      }
+    }
+  }
+
+}
+
+.nav-horizontal.right {
+  text-align: right;
+}

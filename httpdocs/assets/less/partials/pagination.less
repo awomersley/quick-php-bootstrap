@@ -1,0 +1,168 @@
+// Pagination
+.sa-pagination{
+
+  li{
+    display:inline-block;
+    margin-right: @xs;
+  }
+
+  a{
+    border:solid 1px @mid;
+    background:@light_light;
+    display:block;
+    .box(@static-md+5,0);
+  }
+
+  a:hover{
+    background:@light;
+  }
+
+  a.active{
+    background:@primary;
+    border-color:@primary_dark;
+    color:@primary_contrast;
+  }
+
+}
+
+.next-prev-pages{
+  .btn{ width:210px; }
+
+  .xs({
+    text-align:center;
+  });
+}
+
+
+.next-prev-items{
+
+  height:140px;
+  position:relative;
+
+  .divider{
+    position:absolute; top:0; left:50%; z-index:20;
+    width:1px;height:100%;
+    background:@light; transition: opacity 0.5s;
+  }
+
+  &:hover{
+    .divider{
+      opacity:0;
+    }
+  }
+
+  a{
+    display:block;
+    width:50%;
+    height:100%;
+    float:left;
+    position:relative;
+    z-index:10;
+    transition: background 0.5s, border 0.5s;
+    border-top:solid 1px @light;
+    border-bottom:solid 1px @light;
+
+    &:hover{
+      background:@primary;
+      border-color:@primary;
+      .text, h6{
+        color:@white !important;
+      }
+      .nav-icon{
+        fill:@white;
+      }
+      .item-icon, .img-border-xs{
+        background:@white;
+        border-color:@white;
+      }
+    }
+  }
+
+  .text,h6{
+    transition: color 0.2s;
+  }
+
+  .text{
+    max-width:340px;
+  }
+
+  p{
+    margin-bottom:0.2em;
+  }
+
+  .nav-icon{
+    width:30px;
+    height:60px;
+    fill:@light;
+    transition: fill 0.5s;
+  }
+
+  .item-icon{
+    transition: background 0.5s;
+    .valign-mid();
+    background:@light;
+  }
+
+  .next{
+    .text{
+      left:@lg;
+    }
+    .nav-icon{
+      right:@md;
+    }
+    .item-icon{
+      left:@lg;
+    }
+  }
+  .prev{
+    .text{
+      right:@lg;
+      text-align:right;
+    }
+    .nav-icon{
+      left:@md;
+    }
+    .item-icon{
+      right:@lg;
+    }
+  }
+
+  &.has-item-icon{
+    .prev .text{
+      padding-right:100px;
+    }
+    .next .text{
+      padding-left:100px;
+    }
+  }
+
+  .mobile({
+    height:120px;
+    a{ width:100%; }
+    .prev, .divider{
+      display:none;
+    }
+    .icon-holder{
+      width:70px;
+      height:70px;
+    }
+    .next{
+      .text{
+        left:@sm;
+        max-width:80%;
+      }
+      .nav-icon{
+        right:@sm;
+      }
+      .item-icon{
+        left:@sm;
+      }
+    }
+    &.has-item-icon{
+      .next .text{
+        padding-left:90px;
+      }
+    }
+  });
+
+}

@@ -1,0 +1,41 @@
+article.products{
+
+  .img-holder {
+    height:300px;
+    position: relative;
+  }
+
+  .text{
+    text-align:center;
+
+    .sm({
+      text-align:center;
+      padding-top:0;
+    });
+
+
+
+    .btn {
+      vertical-align:middle;
+      text-align:center;
+    }
+
+  }
+
+  .title{
+
+    color:@black;
+    margin-top:@sm;
+
+  }
+
+  &:hover {
+    h4{
+      color:@primary;
+    }
+    .text{
+      border-color:@primary;
+    }
+  }
+
+}
